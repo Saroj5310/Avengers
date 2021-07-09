@@ -1,0 +1,53 @@
+ Stack(
+       fit: StackFit.expand,
+        children: [
+          Image.asset(
+            'assets/another.jpg',
+            fit: BoxFit.fill,
+            color: Colors.black.withOpacity(0.7),
+            colorBlendMode: BlendMode.darken,
+          ),
+        ],
+      ),
+      Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SingleChildScrollView(
+          child: Card(
+            child: Column(
+              children: [
+                Form(
+                    child: Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: Column(
+                    children: [
+                      TextFormField(
+                        decoration: InputDecoration(
+                            hintText: "Enter Username", labelText: "UserName"),
+                      ),
+                      SizedBox(
+                        height: 20,
+                      ),
+                      TextFormField(
+                          decoration: InputDecoration(
+                              hintText: "Enter Pasword",
+                              labelText: "Password")),
+                    ],
+                  ),
+                )),
+                SizedBox(
+                  height: 20,
+                ),
+                Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RaisedButton(
+                    onPressed: () {},
+                    child: Text("Signin"),
+                    color: Colors.orange,
+                    textColor: Colors.white,
+                  ),
+                )
+              ],
+            ),
+          ),
+        ),
+      )
